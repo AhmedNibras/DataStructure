@@ -108,11 +108,12 @@ int main()
     fourth->next = NULL;
     
     linkedlistTraversal(head);
-    // head = insertAtFirst(head, 56);
-    // head = insertAtIndex(head, 45, 1);
-    // head = insertAtEnd(head, 10);
+    head = insertAtFirst(head, 56);
+    head = insertAtIndex(head, 45, 1);
+    head = insertAtEnd(head, 10);
     head = insertAfter(head, second, 22);
-    printf("New List\n");
+
+    printf("\nLinkedList After Insertion\n");
     linkedlistTraversal(head);
     return 0;
 };

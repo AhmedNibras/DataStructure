@@ -59,6 +59,14 @@ int peek(struct stack* sp, int i)
         return sp->arr[arrayInd];
     }
 }
+int stackTop(struct stack* sp){
+    return sp->arr[sp->top];
+}
+
+int stackBot(struct stack* sp){
+    return sp->arr[0];
+}
+
 int main(){
     struct stack *sp = (struct stack *) malloc(sizeof(struct stack));
     sp->size = 10;
@@ -85,6 +93,10 @@ int main(){
     printf("Popped %d from the stack\n", pop(sp)); // --> Last in first out!
     printf("Popped %d from the stack\n", pop(sp)); // --> Last in first out!
     printf("Popped %d from the stack\n", pop(sp)); // --> Last in first out!
+
+
+    printf("The topmost value of this stack is %d\n", stackTop(sp));
+    printf("The Bottom most value of this stack is %d\n", stackBot(sp));
 
     for(int j = 1; j <= sp->top+1; j++) 
     {
